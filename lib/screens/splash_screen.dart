@@ -1,29 +1,27 @@
 import 'package:flutter/material.dart';
 
-class SplashScreen extends StatefulWidget {
-  const SplashScreen({Key? key}) : super(key: key);
+class SplashScreen extends StatelessWidget {
+  const SplashScreen({super.key});
 
-  @override
-  State<SplashScreen> createState() => _SplashScreenState();
-}
-
-class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Center(
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        backgroundColor: Colors.white,
+        body: Center(
           child: Column(
-        children: [
-          const SizedBox(
-            height: 220,
+            children: [
+              Image.asset("assets/images/whatsapp-icon.png"),
+              const SizedBox(
+                height: 120,
+              ),
+              Image.asset(
+                "assets/images/meta-logo.png"),
+            ],
           ),
-          Image.asset(
-            "assets/images/meta-logo.png",
-            height: 80,
-          ),
-        ],
-      )),
+        ),
+      ),
     );
   }
 }
