@@ -11,13 +11,18 @@ class SplashScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         body: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              const SizedBox(
+                height: 300,
+              ),
               Image.asset("assets/images/whatsapp-icon.png"),
               const SizedBox(
-                height: 120,
+                height: 400,
               ),
               Image.asset(
-                "assets/images/meta-logo.png"),
+                "assets/imag25/meta-logo.png"),
             ],
           ),
         ),
