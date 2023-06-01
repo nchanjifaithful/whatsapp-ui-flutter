@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_ui/screens/home_screen/status_list.dart';
+import 'package:whatsapp_ui/models/status_model.dart';
 
-class StatusScreeen extends StatelessWidget {
+class StatusScreeen extends StatefulWidget {
   const StatusScreeen({super.key});
 
+  @override
+  State<StatusScreeen> createState() => _StatusScreeenState();
+}
+
+class _StatusScreeenState extends State<StatusScreeen> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -24,7 +29,19 @@ class StatusScreeen extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
           child: Text('Recent updates'),
         ),
-        Container(child: StatusList()),
+        ListView.builder(
+          itemCount: list.length,
+          itemBuilder: (BuildContext context, int index) {
+            return ListTile(
+              leading: const CircleAvatar(
+                radius: 25.0,
+                child: Icon(Icons.person),
+              ),
+              title: Text(list[index].userName),
+              subtitle: Text(list[index].time),
+            );
+          },
+        ),
       ],
     );
   }

@@ -14,13 +14,20 @@ class _ChatsState extends State<Chats> {
     return ListView.builder(
       itemCount: list.length,
       itemBuilder: (BuildContext context, int index) {
-        return ListTile(
-          leading: const CircleAvatar(
-            child: Icon(Icons.person),
-          ),
-          title: Text(list[index].userName),
-          subtitle: Text(list[index].lastMessage),
-          trailing: Text(list[index].time),
+        Column(
+          children: [
+            const Divider(
+              height: 15.0,
+            ),
+            ListTile(
+              leading: const CircleAvatar(
+                child: Icon(Icons.person),
+              ),
+              title: Text(list[index].userName),
+              subtitle: Text(list[index].lastMessage),
+              trailing: Text(list[index].time),
+            ),
+          ],
         );
       },
     );
