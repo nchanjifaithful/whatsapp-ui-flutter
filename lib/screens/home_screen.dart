@@ -37,7 +37,7 @@ class HomeScreen  extends StatelessWidget {
         body: const TabBarView(
           children: [
             CommunityScreen(),
-            ChatScreen(),
+            Chats(),
             StatusScreeen(),
             Calls(),
           ],
