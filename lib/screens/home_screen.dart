@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:whatsapp_ui/screens/home_screen/calls.dart';
 import 'package:whatsapp_ui/screens/home_screen/chats.dart';
 import 'package:whatsapp_ui/screens/home_screen/community_screen.dart';
-import 'package:whatsapp_ui/screens/home_screen/status_screen.dart';
+import 'package:whatsapp_ui/screens/home_screen/status.dart';
 
 class HomeScreen  extends StatelessWidget {
   const HomeScreen ({super.key});
