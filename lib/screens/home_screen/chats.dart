@@ -29,6 +29,7 @@ class _ChatsState extends State<Chats> {
             ),
           ],
         );
+        return null;
       },
     );
   }
