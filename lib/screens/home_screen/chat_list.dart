@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_ui/screens/data/user.dart';
+import 'package:whatsapp_ui/models/chat_model.dart';
 
 class ChatList extends StatelessWidget {
   ChatList({super.key});

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_ui/screens/data/status.dart';
+import 'package:whatsapp_ui/models/status_model.dart';
 
 class StatusList extends StatelessWidget {
   StatusList({super.key});
