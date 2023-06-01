@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_ui/screens/home_screen/calls.dart';
-import 'package:whatsapp_ui/screens/home_screen/chats_screen.dart';
+import 'package:whatsapp_ui/screens/home_screen/chats.dart';
 import 'package:whatsapp_ui/screens/home_screen/community_screen.dart';
 import 'package:whatsapp_ui/screens/home_screen/status_screen.dart';
 
@@ -41,7 +41,17 @@ class HomeScreen  extends StatelessWidget {
             StatusScreeen(),
             Calls(),
           ],
-        )
+        ),
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: Colors.teal,
+          child: const Icon(
+            Icons.message,
+            color: Colors.white
+          ),
+          onPressed: () {
+            Null;
+          },
+        ),
       ),
     );
   }
