@@ -15,10 +15,18 @@ class _ContactsState extends State<Contacts> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.teal,
-        actions: const [
-            Icon(Icons.search),
-            SizedBox(width: 10,),
-            Icon(Icons.more_vert),
+        actions: [
+            const Icon(Icons.search),
+            const SizedBox(width: 10,),
+            PopupMenuButton(
+              icon: const Icon(Icons.more_vert, color: Colors.white),
+              itemBuilder: (context) => const [
+                PopupMenuItem(child: Text("Invite a friend")),
+                PopupMenuItem(child: Text('Contacts')),
+                PopupMenuItem(child: Text('Refresh')),
+                PopupMenuItem(child: Text('Help'))
+              ],
+            ),
         ],
         title: ListTile(
           title: const Text('Contacts'),

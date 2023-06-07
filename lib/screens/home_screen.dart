@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_ui/screens/contacts.dart';
 import 'package:whatsapp_ui/screens/home_screen/calls.dart';
 import 'package:whatsapp_ui/screens/home_screen/chats.dart';
-import 'package:whatsapp_ui/screens/home_screen/community_screen.dart';
+import 'package:whatsapp_ui/screens/home_screen/community.dart';
 import 'package:whatsapp_ui/screens/home_screen/status.dart';
 
-class HomeScreen  extends StatelessWidget {
-  const HomeScreen ({super.key});
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,21 +17,30 @@ class HomeScreen  extends StatelessWidget {
           title: const Text('Whatsapp'),
           actions: const [
             Icon(Icons.camera_alt),
-            SizedBox(width: 10,),
+            SizedBox(
+              width: 10,
+            ),
             Icon(Icons.search),
-            SizedBox(width: 10,),
-            Icon(Icons.more_vert),        
+            SizedBox(
+              width: 10,
+            ),
+            Icon(Icons.more_vert),
           ],
           bottom: const TabBar(
             labelStyle: TextStyle(
               fontWeight: FontWeight.bold,
-
             ),
             tabs: [
-              Tab(icon: Icon(Icons.people),),
-              Tab(text: "CHATS",),
+              Tab(
+                icon: Icon(Icons.people),
+              ),
+              Tab(
+                text: "CHATS",
+              ),
               Tab(text: "STATUS"),
-              Tab(text:"CALLS",)
+              Tab(
+                text: "CALLS",
+              )
             ],
           ),
         ),
@@ -44,12 +54,11 @@ class HomeScreen  extends StatelessWidget {
         ),
         floatingActionButton: FloatingActionButton(
           backgroundColor: Colors.teal,
-          child: const Icon(
-            Icons.message,
-            color: Colors.white
-          ),
+          child: const Icon(Icons.message, color: Colors.white),
           onPressed: () {
-            Null;
+            var router = MaterialPageRoute(
+                builder: (BuildContext context) => const Contacts());
+                Navigator.of(context).push(router);
           },
         ),
       ),
